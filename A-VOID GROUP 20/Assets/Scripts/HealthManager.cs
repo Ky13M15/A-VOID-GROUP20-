@@ -12,6 +12,7 @@ public class HealthManager : MonoBehaviour
     }
 
     // Update is called once per frame
+    [System.Obsolete]
     void Update()
     {
         if(healthAmount <= 0)
