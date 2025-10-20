@@ -29976,6 +29976,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de55caf72bdc5fd43815b4e67a59c691, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1867034391}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de55caf72bdc5fd43815b4e67a59c691, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1867034393}
   m_SourcePrefab: {fileID: 100100000, guid: de55caf72bdc5fd43815b4e67a59c691, type: 3}
 --- !u!1 &1220436075 stripped
 GameObject:
@@ -31217,6 +31220,7 @@ GameObject:
   - component: {fileID: 1382714741}
   - component: {fileID: 1382714740}
   - component: {fileID: 1382714739}
+  - component: {fileID: 1382714743}
   m_Layer: 0
   m_Name: Fire PS
   m_TagString: Untagged
@@ -36106,6 +36110,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2118739027}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &1382714743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382714737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a09b6cf6b9d6c8b4ab3993eb48e1b147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPack: {fileID: 6310839669453490275, guid: 3d61580a08425a142853a513808231bb, type: 3}
 --- !u!1 &1398281611
 GameObject:
   m_ObjectHideFlags: 0
@@ -50096,6 +50113,7 @@ MonoBehaviour:
   throwUpwardBoost: 1
   sprintMultiplier: 0
   pauseMenuScript: {fileID: 749416647}
+  animator: {fileID: 0}
 --- !u!114 &1807307344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50969,6 +50987,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: de55caf72bdc5fd43815b4e67a59c691, type: 3}
   m_PrefabInstance: {fileID: 1217037721}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1867034393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867034390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01fb41b416c79624d9225f7886f47bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHralth: 0
+  playerCamera: {fileID: 2111254189}
+  normalFOV: 60
+  aimFOV: 40
+  aimSpeed: 10
+  interactRange: 3
+  interactLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  jetpackForce: 10
+  DeathScreen: {fileID: 0}
+  moveSpeed: 5
+  gravity: -9.81
+  jumpHeight: 1.5
+  cameraTransform: {fileID: 0}
+  lookSensitivity: 2
+  verticalLookLimit: 90
+  bulletPrefab: {fileID: 0}
+  gunPoint: {fileID: 0}
+  crouchHeight: 1
+  standHeight: 2
+  crouchSpeed: 2.5
+  pickupRange: 3
+  holdPoint: {fileID: 0}
+  pickupText: {fileID: 0}
+  throwForce: 10
+  throwUpwardBoost: 1
+  sprintMultiplier: 0
+  pauseMenuScript: {fileID: 749416647}
+  animator: {fileID: 0}
 --- !u!1001 &1877655311
 PrefabInstance:
   m_ObjectHideFlags: 0
