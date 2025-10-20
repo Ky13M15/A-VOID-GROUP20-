@@ -78,6 +78,8 @@ public class FPController : MonoBehaviour
 
     public PauseMenu pauseMenuScript;
 
+    public Animator animator;
+
 
 
 
@@ -86,7 +88,7 @@ public class FPController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         originalMoveSpeed = moveSpeed;
 
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.None;
         Cursor.visible = false;
 
         PlayerInput playerInput = GetComponent<PlayerInput>();
@@ -103,7 +105,9 @@ public class FPController : MonoBehaviour
     }
     private void Start()
     {
-        DeathScreen.SetActive(false);  
+        DeathScreen.SetActive(false);
+
+        animator = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -140,6 +144,8 @@ public class FPController : MonoBehaviour
 
 
     public void OnMove(InputAction.CallbackContext context) => moveInput = context.ReadValue<Vector2>();
+
+
     public void OnPickup(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
@@ -279,10 +285,12 @@ public class FPController : MonoBehaviour
         if (context.performed)
         {
             isSprinting = true;
+            animator.SetBool("isMoving", true);
         }
         else if (context.canceled)
         {
             isSprinting = false;
+            animator.SetBool("isMoving", false);
         }
 
     }
