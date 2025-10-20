@@ -76,8 +76,6 @@ public class FPController : MonoBehaviour
     [SerializeField] private float sprintMultiplier;
     private bool isSprinting=false;
 
-    public PauseMenu pauseMenuScript;
-
 
 
 
@@ -248,32 +246,18 @@ public class FPController : MonoBehaviour
     public void OnLook(InputAction.CallbackContext context) => lookInput = context.ReadValue<Vector2>();
     private void Shoot()
     {
-        if (!pauseMenuScript.GameIsPaused)
+        if (bulletPrefab != null && gunPoint != null)
         {
-            Debug.Log("Bool: " + pauseMenuScript.GameIsPaused);
-            if (bulletPrefab != null && gunPoint != null)
+            GameObject bullet = Instantiate(bulletPrefab, gunPoint.position, gunPoint.rotation);
+            Rigidbody rb = bullet.GetComponent<Rigidbody>();
+
+            if (rb != null)
             {
-                GameObject bullet = Instantiate(bulletPrefab, gunPoint.position, gunPoint.rotation);
-                Rigidbody rb = bullet.GetComponent<Rigidbody>();
-
-                if (rb != null)
-                {
-                    rb.AddForce(gunPoint.forward * 1000f); //Adjust force value as needed
-                    Destroy(bullet, 3);// Delete the bullet from the scene after 3 seconds
-                }
+                rb.AddForce(gunPoint.forward * 1000f); //Adjust force value as needed
+                Destroy(bullet, 3);// Delete the bullet from the scene after 3 seconds
             }
-           
 
         }
-        else
-        {
-            Cursor.visible = true;
-            Debug.Log("Bool: " + pauseMenuScript.GameIsPaused);
-            Cursor.lockState = CursorLockMode.None;
-
-        }
-
-        Debug.Log("shoot");
     }
         public void OnSprint(InputAction.CallbackContext context) {
         if (context.performed)
