@@ -1,23 +1,31 @@
 using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class FPController : MonoBehaviour
 {
+    public float maxHealth = 100f;
+    public float currentHralth;
     private InputActionAsset interactAction;
     public Camera playerCamera;
     public float normalFOV = 60f;
     public float aimFOV = 40f;
     public float aimSpeed = 10f;
+
+  
    
     [SerializeField] private float interactRange = 3f;
     [SerializeField] LayerMask interactLayer;
     
     [SerializeField] float jetpackForce = 10f;
-    [SerializeField] float fuel = 100f;
 
-   
+
+    [SerializeField] private GameObject DeathScreen;
+
+
 
 
 
@@ -90,6 +98,10 @@ public class FPController : MonoBehaviour
 
 
 
+    }
+    private void Start()
+    {
+        DeathScreen.SetActive(false);  
     }
     private void Update()
     {
@@ -293,17 +305,9 @@ public class FPController : MonoBehaviour
         cameraTransform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
     }
-    public void HandleJetpack()
-    {
-        if (Keyboard.current.spaceKey.isPressed && fuel > 0)
-        {
-            controller.Move(Vector3.up * jetpackForce * Time.deltaTime);
-            fuel -= Time.deltaTime * 5;
-        }
-        else
-        {
-            fuel = Math.Min(fuel + Time.deltaTime * 2, 100);
-        }
+  
+      
+        
 
     }
-}
+
