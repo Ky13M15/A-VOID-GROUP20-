@@ -5380,7 +5380,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 56792133}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 56792132}
@@ -5679,7 +5679,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1585635989322745206, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1867034392}
-    - targetCorrespondingSourceObject: {fileID: 1585635989322745206, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 4731426983793393744, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
       insertIndex: -1
       addedObject: {fileID: 316224591}
     m_AddedComponents:
@@ -5689,9 +5689,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5525965130919065816, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1807307343}
-    - targetCorrespondingSourceObject: {fileID: 2667063030258238167, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2111254192}
   m_SourcePrefab: {fileID: 100100000, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
 --- !u!1001 &104485603
 PrefabInstance:
@@ -12074,7 +12071,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 246288482}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 246288481}
@@ -13134,7 +13131,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 360869138}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 360869137}
@@ -13228,7 +13225,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 372830415}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 372830414}
@@ -13753,7 +13750,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 427380058}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 427380057}
@@ -14198,7 +14195,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 457587944}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 457587943}
@@ -19560,7 +19557,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 517674576}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 517674575}
@@ -20881,6 +20878,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 427420708100086891, guid: 7cd3ef73132107f4d9746c12f8f9e439, type: 3}
   m_PrefabInstance: {fileID: 637310469}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &640083915
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e32bbca3537cecc4c85e4b3b704fe5e7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 166.18
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e32bbca3537cecc4c85e4b3b704fe5e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.68
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e32bbca3537cecc4c85e4b3b704fe5e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 299.79807
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e32bbca3537cecc4c85e4b3b704fe5e7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7188487
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e32bbca3537cecc4c85e4b3b704fe5e7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e32bbca3537cecc4c85e4b3b704fe5e7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.69516665
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e32bbca3537cecc4c85e4b3b704fe5e7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e32bbca3537cecc4c85e4b3b704fe5e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e32bbca3537cecc4c85e4b3b704fe5e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 88.081
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e32bbca3537cecc4c85e4b3b704fe5e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e32bbca3537cecc4c85e4b3b704fe5e7, type: 3}
+      propertyPath: m_Name
+      value: Monitor 01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e32bbca3537cecc4c85e4b3b704fe5e7, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e32bbca3537cecc4c85e4b3b704fe5e7, type: 3}
 --- !u!1001 &673959238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21328,6 +21386,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 427420708100086891, guid: 7cd3ef73132107f4d9746c12f8f9e439, type: 3}
   m_PrefabInstance: {fileID: 701265054}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &705370719 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4731426983793393744, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
+  m_PrefabInstance: {fileID: 103440607}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &705370722 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3960247419702711352, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
+  m_PrefabInstance: {fileID: 103440607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &716791403
 GameObject:
   m_ObjectHideFlags: 0
@@ -21608,7 +21676,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 723162656}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 723162655}
@@ -28431,7 +28499,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 1001890252}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 1001890251}
@@ -28684,7 +28752,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 1037779377}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 1037779376}
@@ -29664,7 +29732,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 1152337158}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 1152337157}
@@ -30158,7 +30226,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 1216790827}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 1216790826}
@@ -30241,11 +30309,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1867034393}
   m_SourcePrefab: {fileID: 100100000, guid: de55caf72bdc5fd43815b4e67a59c691, type: 3}
---- !u!1 &1220436075 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2667063030258238167, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
-  m_PrefabInstance: {fileID: 103440607}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1221004185
 GameObject:
   m_ObjectHideFlags: 0
@@ -43790,6 +43853,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 427420708100086891, guid: 7cd3ef73132107f4d9746c12f8f9e439, type: 3}
   m_PrefabInstance: {fileID: 1660846206}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1660871902
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 69a772eb58a474743ad70cfd08a68020, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 64.53
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 69a772eb58a474743ad70cfd08a68020, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 69a772eb58a474743ad70cfd08a68020, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 50.68131
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 69a772eb58a474743ad70cfd08a68020, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9833558
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 69a772eb58a474743ad70cfd08a68020, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.18169032
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 69a772eb58a474743ad70cfd08a68020, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 69a772eb58a474743ad70cfd08a68020, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 69a772eb58a474743ad70cfd08a68020, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 20.936
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 69a772eb58a474743ad70cfd08a68020, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 69a772eb58a474743ad70cfd08a68020, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 69a772eb58a474743ad70cfd08a68020, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b2635341a3a3d74db68bf716c66f469, type: 2}
+    - target: {fileID: 919132149155446097, guid: 69a772eb58a474743ad70cfd08a68020, type: 3}
+      propertyPath: m_Name
+      value: SpaceShip
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 69a772eb58a474743ad70cfd08a68020, type: 3}
 --- !u!1 &1680341884
 GameObject:
   m_ObjectHideFlags: 0
@@ -44167,7 +44291,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 1695870204}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 1695870203}
@@ -49688,7 +49812,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 1764480241}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 1764480240}
@@ -50018,7 +50142,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 1772090093}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 1772090092}
@@ -50346,7 +50470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHralth: 0
-  playerCamera: {fileID: 2111254189}
+  playerCamera: {fileID: 705370722}
   normalFOV: 60
   aimFOV: 40
   aimSpeed: 10
@@ -50359,7 +50483,7 @@ MonoBehaviour:
   moveSpeed: 5
   gravity: -9.81
   jumpHeight: 1.5
-  cameraTransform: {fileID: 2111254186}
+  cameraTransform: {fileID: 705370719}
   lookSensitivity: 2
   verticalLookLimit: 90
   bulletPrefab: {fileID: 919132149155446097, guid: 5775913311fcade4f8e2e3d9103d4a7d, type: 3}
@@ -51033,7 +51157,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 1863689300}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 1863689299}
@@ -51212,7 +51336,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 1864415016}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 1864415015}
@@ -51262,7 +51386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHralth: 0
-  playerCamera: {fileID: 2111254189}
+  playerCamera: {fileID: 705370722}
   normalFOV: 60
   aimFOV: 40
   aimSpeed: 10
@@ -51275,7 +51399,7 @@ MonoBehaviour:
   moveSpeed: 5
   gravity: -9.81
   jumpHeight: 1.5
-  cameraTransform: {fileID: 0}
+  cameraTransform: {fileID: 705370719}
   lookSensitivity: 2
   verticalLookLimit: 90
   bulletPrefab: {fileID: 0}
@@ -51581,15 +51705,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1807307345}
+    m_TransformParent: {fileID: 705370719}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3f745f6893a9b2b46b097ef121b8d125, type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.6445704
+      value: 6.6445675
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f745f6893a9b2b46b097ef121b8d125, type: 3}
       propertyPath: m_LocalScale.y
-      value: 28.005056
+      value: 28.005043
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f745f6893a9b2b46b097ef121b8d125, type: 3}
       propertyPath: m_LocalScale.z
@@ -51601,7 +51725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f745f6893a9b2b46b097ef121b8d125, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6930288
+      value: -0.19397122
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f745f6893a9b2b46b097ef121b8d125, type: 3}
       propertyPath: m_LocalPosition.z
@@ -51903,7 +52027,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 1930051790}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 1930051789}
@@ -52732,7 +52856,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   controller: {fileID: 2042801544}
-  daynNiteScript: {fileID: 2111254192}
+  daynNiteScript: {fileID: 0}
   isDead: 0
   deathLag: 5
   animator: {fileID: 2042801543}
@@ -53183,38 +53307,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7411447246449550177, guid: ff42983c35f444e44a5e5dfc8cab4232, type: 3}
   m_PrefabInstance: {fileID: 2109891291}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2111254186 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4731426983793393744, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
-  m_PrefabInstance: {fileID: 103440607}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &2111254189 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 3960247419702711352, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
-  m_PrefabInstance: {fileID: 103440607}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2111254192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220436075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab5f6bf093c0c4c468ff10e90dd9ce5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ourSkybox: {fileID: 2100000, guid: 527a379041250b64eb1c94c1ade589fb, type: 2}
-  exposure: 0
-  daysEnd: 24
-  currentTime: 0
-  timePassesBy: 0.075
-  daysCounter: 0
-  negativeMultiplier: 10
-  timeMultiplier: 15
-  timeOfDay: 0
-  ourSun: {fileID: 410087040}
 --- !u!1001 &2116089854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63506,3 +63598,5 @@ SceneRoots:
   - {fileID: 1942836851}
   - {fileID: 285599855}
   - {fileID: 915371263}
+  - {fileID: 1660871902}
+  - {fileID: 640083915}
