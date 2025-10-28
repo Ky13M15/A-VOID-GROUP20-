@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.Events;
 
 public class HealthManager : MonoBehaviour
 {
@@ -18,8 +17,6 @@ public class HealthManager : MonoBehaviour
     public Transform spawnPoint;
     public bool reloadSceneOnRespawn = false;
 
-    public Animator bloodSplashAnimator;
-
 
 
     void Start()
@@ -33,11 +30,6 @@ public class HealthManager : MonoBehaviour
     {
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0,maxHealth);
-
-        if (bloodSplashAnimator  != null)
-        {
-            bloodSplashAnimator.SetTrigger("ShowSplash");
-        }
 
         UpdateHealthUI();
         if (currentHealth <= 0)
@@ -90,6 +82,5 @@ public class HealthManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-  
 
 }
