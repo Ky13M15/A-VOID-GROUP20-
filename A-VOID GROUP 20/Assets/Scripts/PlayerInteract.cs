@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerInteract : MonoBehaviour
 {
     private Controls1 inputActions;
-    private SaveStation currentStation;
+    private IInteractable currentInteractable;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -13,29 +14,29 @@ public class PlayerInteract : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        SaveStation station = other.GetComponent<SaveStation>();
-        if (station != null)
+        IInteractable interactable = other.GetComponent<IInteractable>();
+        if (interactable != null)
         {
-            currentStation = station;
+            currentInteractable = interactable;
         }
-        void OnTriggerExit(Collider other)
+    }
+       private void OnTriggerExit(Collider other)
        
         {
-            SaveStation station = other.GetComponent<SaveStation>();
-            if (station != null && station == currentStation) 
+        IInteractable interactable = other.GetComponent<IInteractable>();
+
+        if (interactable!= null && interactable == currentInteractable) 
             { 
-                currentStation = null; 
+                currentInteractable = null; 
             }
         }
-    }
-
-    // Update is called once per frame
-    void TryInteract()
+    private void TryInteract()
     {
-        if (currentStation != null)
+        if (currentInteractable != null)
         {
-            currentStation.Interact();
+            currentInteractable.Interact();
         }
-
     }
 }
+
+   

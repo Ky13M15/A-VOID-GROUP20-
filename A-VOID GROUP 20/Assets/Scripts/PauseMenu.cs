@@ -1,11 +1,13 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
    public bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public PlayerInput Controls1;
 
     // Update is called once per frame
     void Update()
@@ -30,6 +32,9 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+       
+        if(Controls1 != null)
+            Controls1.ActivateInput();
 
         Debug.Log("Resume");
     }
@@ -40,6 +45,13 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
         Cursor.visible = true;
+        Cursor.lockState= CursorLockMode.None;
+
+        if(Controls1 !=null)
+            Controls1.DeactivateInput();
+
+        Debug.Log("Game Paused");
+
       
     }
 

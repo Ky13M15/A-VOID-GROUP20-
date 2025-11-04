@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class FPController : MonoBehaviour
 {
     public float maxHealth = 100f;
-    public float currentHralth;
+    public float currentHealth;
     private InputActionAsset interactAction;
     public Camera playerCamera;
     public float normalFOV = 60f;
@@ -264,8 +264,8 @@ public class FPController : MonoBehaviour
 
                 if (rb != null)
                 {
-                    rb.AddForce(gunPoint.forward * 1000f); //Adjust force value as needed
-                    Destroy(bullet, 3);// Delete the bullet from the scene after 3 seconds
+                    rb.AddForce(gunPoint.forward * 1000f,ForceMode.Impulse);
+                    Destroy(bullet, 2.5f);
                 }
             }
            
