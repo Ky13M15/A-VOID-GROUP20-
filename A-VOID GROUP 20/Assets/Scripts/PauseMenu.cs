@@ -34,7 +34,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
        
         if(Controls1 != null)
-            Controls1.ActivateInput();
+            Controls1.enabled = true;
 
         Debug.Log("Resume");
     }
@@ -48,7 +48,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState= CursorLockMode.None;
 
         if(Controls1 !=null)
-            Controls1.DeactivateInput();
+            Controls1.enabled = false;
 
         Debug.Log("Game Paused");
 
