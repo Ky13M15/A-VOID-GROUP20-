@@ -6257,6 +6257,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5525965130919065816, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1807307343}
+    - targetCorrespondingSourceObject: {fileID: 2667063030258238167, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 705370725}
   m_SourcePrefab: {fileID: 100100000, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
 --- !u!1001 &104289191
 PrefabInstance:
@@ -15570,6 +15573,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2755091009202827301, guid: ba0557dfa513e604882fccfa126fd190, type: 3}
   m_PrefabInstance: {fileID: 1457832133}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &408025979 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2667063030258238167, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
+  m_PrefabInstance: {fileID: 103440607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -17067,7 +17075,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.77253073, g: 0.51886785, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -17088,7 +17096,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 749416647}
+      - m_Target: {fileID: 749416649}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -24968,6 +24976,28 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 3960247419702711352, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
   m_PrefabInstance: {fileID: 103440607}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &705370725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408025979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab5f6bf093c0c4c468ff10e90dd9ce5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ourSkybox: {fileID: 2100000, guid: 527a379041250b64eb1c94c1ade589fb, type: 2}
+  exposure: 0
+  daysEnd: 24
+  currentTime: 0
+  timePassesBy: 0.1
+  daysCounter: 0
+  negativeMultiplier: 25
+  timeMultiplier: 15
+  timeOfDay: 0
+  ourSun: {fileID: 410087040}
 --- !u!4 &714826029 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2755091009202827301, guid: ba0557dfa513e604882fccfa126fd190, type: 3}
@@ -44083,6 +44113,33 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5798503031594020154, guid: 053d5858636ba8344a083173a05946ea, type: 3}
   m_PrefabInstance: {fileID: 3852069123161525344}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &1413505212
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413505207}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &1415765837 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2755091009202827301, guid: ba0557dfa513e604882fccfa126fd190, type: 3}
@@ -74400,7 +74457,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5798503031594020154, guid: 053d5858636ba8344a083173a05946ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1413505212}
   m_SourcePrefab: {fileID: 100100000, guid: 053d5858636ba8344a083173a05946ea, type: 3}
 --- !u!1001 &6341237119961819237
 PrefabInstance:
