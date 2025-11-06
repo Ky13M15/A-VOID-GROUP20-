@@ -6257,6 +6257,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5525965130919065816, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1807307343}
+    - targetCorrespondingSourceObject: {fileID: 2667063030258238167, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 823336848}
   m_SourcePrefab: {fileID: 100100000, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
 --- !u!1001 &104289191
 PrefabInstance:
@@ -14903,6 +14906,28 @@ MonoBehaviour:
   sprintMultiplier: 0
   pauseMenuScript: {fileID: 749416647}
   animator: {fileID: 0}
+--- !u!95 &354573406
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354573403}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d14ce5817e61a8f4ab781d38f6d90fcf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &360869134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22337,7 +22362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e824f85ef71bf2d4a8b183552b6c6927, type: 3}
       propertyPath: m_Name
-      value: Naut.fbx_Collection
+      value: Astronaut
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22346,6 +22371,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e824f85ef71bf2d4a8b183552b6c6927, type: 3}
       insertIndex: -1
       addedObject: {fileID: 354573405}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e824f85ef71bf2d4a8b183552b6c6927, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 354573406}
   m_SourcePrefab: {fileID: 100100000, guid: e824f85ef71bf2d4a8b183552b6c6927, type: 3}
 --- !u!1 &517674574 stripped
 GameObject:
@@ -31349,6 +31377,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba0557dfa513e604882fccfa126fd190, type: 3}
+--- !u!1 &823336845 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2667063030258238167, guid: e1f8da842c1d30a4aa0665ecf7458e86, type: 3}
+  m_PrefabInstance: {fileID: 103440607}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &823336848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823336845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab5f6bf093c0c4c468ff10e90dd9ce5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ourSkybox: {fileID: 2100000, guid: 527a379041250b64eb1c94c1ade589fb, type: 2}
+  exposure: 0
+  daysEnd: 24
+  currentTime: 0
+  timePassesBy: 0.1
+  daysCounter: 0
+  negativeMultiplier: 25
+  timeMultiplier: 15
+  timeOfDay: 0
+  ourSun: {fileID: 410087040}
 --- !u!4 &829036468 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2755091009202827301, guid: ba0557dfa513e604882fccfa126fd190, type: 3}
