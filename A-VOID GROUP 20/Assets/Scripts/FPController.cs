@@ -88,7 +88,7 @@ public class FPController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         originalMoveSpeed = moveSpeed;
 
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.None;
         Cursor.visible = false;
 
         PlayerInput playerInput = GetComponent<PlayerInput>();
@@ -251,10 +251,7 @@ public class FPController : MonoBehaviour
         }
     }
 
-    public void OnLook(InputAction.CallbackContext context)
-    {
-        lookInput = context.ReadValue<Vector2>();
-    }
+    public void OnLook(InputAction.CallbackContext context) => lookInput = context.ReadValue<Vector2>();
     private void Shoot()
     {
         if (!pauseMenuScript.GameIsPaused)
