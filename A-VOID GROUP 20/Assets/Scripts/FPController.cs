@@ -78,7 +78,7 @@ public class FPController : MonoBehaviour
 
     public PauseMenu pauseMenuScript;
 
-    public Animator animator;
+    private Animator animator;
 
 
 
@@ -186,8 +186,13 @@ public class FPController : MonoBehaviour
     {
         if (context.performed && controller.isGrounded)
         {
+            //animator.SetBool("isJumping", true);
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
+        /*else
+        {
+            animator.SetBool("isJumping", false);
+        }*/
 
     }
     public void OnThrow(InputAction.CallbackContext context)
@@ -285,12 +290,12 @@ public class FPController : MonoBehaviour
         if (context.performed)
         {
             isSprinting = true;
-            animator.SetBool("isMoving", true);
+            
         }
         else if (context.canceled)
         {
             isSprinting = false;
-            animator.SetBool("isMoving", false);
+            
         }
 
     }
@@ -314,10 +319,17 @@ public class FPController : MonoBehaviour
         Vector3 move = transform.right * moveInput.x + transform.forward *
         moveInput.y;
         controller.Move(moveSpeed * Time.deltaTime * move);
+
+        bool isMoving = move.magnitude > 0.1f;
+        animator.SetBool("isMoving", isMoving);
+
         if (controller.isGrounded && velocity.y < 0)
+        {
             velocity.y = -2f;
+        }
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
     }
     public void HandleLook()
     {
