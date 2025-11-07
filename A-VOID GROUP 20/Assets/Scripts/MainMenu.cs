@@ -7,8 +7,15 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        // Loads the next scene in the build list
-        SceneManager.LoadScene("GameScene");
+        FadeManager fade = FindFirstObjectByType<FadeManager>();
+        if (fade != null)
+            fade.FadeOut();
+
+        Invoke("LoadNextScene", 1f);
+    }
+    void LoadNextScene()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 
     public void QuitGame()

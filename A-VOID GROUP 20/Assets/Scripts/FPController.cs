@@ -15,6 +15,8 @@ public class FPController : MonoBehaviour
     public float aimFOV = 40f;
     public float aimSpeed = 10f;
 
+    public LazerMuzzleFlash muzzleFlash;
+
   
    
     [SerializeField] private float interactRange = 3f;
@@ -266,6 +268,10 @@ public class FPController : MonoBehaviour
                 {
                     rb.AddForce(gunPoint.forward * 1000f,ForceMode.Impulse);
                     Destroy(bullet, 2.5f);
+                }
+                if(muzzleFlash != null)
+                {
+                    muzzleFlash.Fire(gunPoint.position, gunPoint.forward);
                 }
             }
            
