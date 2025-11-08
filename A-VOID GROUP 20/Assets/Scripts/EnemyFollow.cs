@@ -3,6 +3,7 @@ using UnityEngine.InputSystem.XR;
 using System.Collections;
 using static DaynNite;
 
+
 public class EnemyFollow : MonoBehaviour
 {
     public float speed = 3f; // Movement speed of the enemy
@@ -19,7 +20,7 @@ public class EnemyFollow : MonoBehaviour
     public Animator animator;
 
     private Vector3 spawnPosition;
-    private bool isAttacking = false;
+    
 
 
     void Start()
@@ -29,28 +30,28 @@ public class EnemyFollow : MonoBehaviour
         animator = GetComponent<Animator>();
 
         spawnPosition = transform.position;
+        
     }
     void Update()
     {
 
         playerDistance = (this.transform.position - player.position).magnitude;
-        if (playerDistance <= minDistance)
-        {
-            PlayerFollow();
-        }
-        else if (playerDistance >= maxDistance)
-        {
-            Debug.Log("Player is too far");
-        }
+        
+        PlayerFollow();
+    }
 
-        if (playerDistance <= minDistance && !isAttacking)
-        {
-            StartAttack();
-        }
-        else if (playerDistance > maxDistance && isAttacking)
-        {
-            StopAttack();
-        }
+    private void OnDrawGizmosSelected()
+    {
+        Vector3 center = transform.position;
+
+        Gizmos.color = Gizmos.color = Color.red;
+
+        Gizmos.DrawWireSphere(center, maxDistance);
+        //Max and Min
+        Gizmos.color = Gizmos.color = Color.yellow;
+
+
+        Gizmos.DrawWireSphere(center, minDistance);
     }
 
     public void PlayerFollow()
@@ -69,6 +70,17 @@ public class EnemyFollow : MonoBehaviour
             Debug.Log("Following");
 
             animator.SetBool("isMoving", true);
+            if (playerDistance <= minDistance)
+            {
+                animator.SetBool("canAttack", true);
+                
+            }
+            if (playerDistance >= minDistance)
+            {
+                animator.SetBool("canAttack", false);
+                Debug.Log("Walk");
+
+            }
         }
         else
         {
@@ -105,15 +117,6 @@ public class EnemyFollow : MonoBehaviour
         transform.rotation = Quaternion.identity;
     }
 
-    void StartAttack()
-    {
-        isAttacking = true;
-        animator.SetBool("IsNear", true);
-    }
-    void StopAttack()
-    {
-        isAttacking = false;
-        animator.SetBool("IsNear", false);
-    }
+    
 
 }
