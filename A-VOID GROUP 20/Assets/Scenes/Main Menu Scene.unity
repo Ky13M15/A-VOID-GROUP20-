@@ -7336,7 +7336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeManager: {fileID: 0}
   warpSound: {fileID: 144069493}
-  nextScene: SampleScene
+  nextScene: IntroCutScene
 --- !u!1 &2124178110
 GameObject:
   m_ObjectHideFlags: 0
