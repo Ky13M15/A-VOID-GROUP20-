@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
     }
     void LoadNextScene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("IntroCutScene");
     }
 
     public void QuitGame()
