@@ -327,7 +327,7 @@ public class FPController : MonoBehaviour
         controller.Move(moveSpeed * Time.deltaTime * move);
 
         bool isMoving = move.magnitude > 0.1f;
-        animator.SetBool("isMoving", isMoving);
+        //animator.SetBool("isMoving", isMoving);
 
         if (controller.isGrounded && velocity.y < 0)
         {
