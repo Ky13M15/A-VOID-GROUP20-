@@ -117,7 +117,7 @@ public class EnemyFollow : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !isDead) //change to bullet tag
+        if (other.CompareTag("Ammo") && !isDead) 
         {
             KillMonster();
         }
