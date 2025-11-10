@@ -20,7 +20,10 @@ public class EnemyFollow : MonoBehaviour
     public Animator animator;
 
     private Vector3 spawnPosition;
-    
+
+    public AudioSource audioSource;
+    public string movementState = "Walk cycle";
+    private bool wasMoving = false;
 
 
     void Start()
@@ -28,6 +31,7 @@ public class EnemyFollow : MonoBehaviour
         // Find the player by tag
         player = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         spawnPosition = transform.position;
         
@@ -38,7 +42,26 @@ public class EnemyFollow : MonoBehaviour
         playerDistance = (this.transform.position - player.position).magnitude;
         
         PlayerFollow();
+        bool isMoving = animator.GetCurrentAnimatorStateInfo(0).IsName(movementState);
+
+        if (isMoving && !wasMoving)
+        {
+            if (audioSource != null && !audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+        }
+        else if (!isMoving && wasMoving)
+        {
+            
+            if (audioSource != null && audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
+        }
+        wasMoving = isMoving;
     }
+
 
     private void OnDrawGizmosSelected()
     {
