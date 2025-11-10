@@ -40,8 +40,12 @@ public class EnemyFollow : MonoBehaviour
     {
 
         playerDistance = (this.transform.position - player.position).magnitude;
+
         
-        PlayerFollow();
+            PlayerFollow();
+        
+        
+
         bool isMoving = animator.GetCurrentAnimatorStateInfo(0).IsName(movementState);
 
         if (isMoving && !wasMoving)
@@ -80,7 +84,7 @@ public class EnemyFollow : MonoBehaviour
     public void PlayerFollow()
     {
 
-        if ((player != null) && (daynNiteScript.timeOfDay == TimeOfDay.Nite))
+        if ((player != null) && (daynNiteScript.timeOfDay == TimeOfDay.Nite) && (playerDistance <= maxDistance))
         {
             // Calculate direction towards the player
             Vector3 direction = (player.position - transform.position).normalized;

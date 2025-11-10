@@ -5456,8 +5456,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 56792133}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -13117,8 +13117,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 246288482}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -14274,8 +14274,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 335972903}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -15216,8 +15216,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 360869138}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -15436,8 +15436,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 372830415}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -16287,8 +16287,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 427380058}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -16719,8 +16719,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 457587944}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -22363,8 +22363,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 517674576}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -25224,7 +25224,7 @@ MonoBehaviour:
   exposure: 0
   daysEnd: 24
   currentTime: 0
-  timePassesBy: 0.1
+  timePassesBy: 0.05
   daysCounter: 0
   negativeMultiplier: 25
   timeMultiplier: 15
@@ -25486,8 +25486,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 723162656}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -31379,8 +31379,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 850609108}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -32650,8 +32650,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 977750026}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -33284,8 +33284,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 1001890252}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -33504,8 +33504,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 1007818591}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -33798,8 +33798,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 1013530182}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -34164,8 +34164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 1037779377}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -35318,8 +35318,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 1120569768}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -35781,8 +35781,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 1152337158}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -36467,8 +36467,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 1216790827}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -36692,8 +36692,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 1223091943}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -51105,8 +51105,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 1695870204}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -56554,8 +56554,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 1748975723}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -56943,8 +56943,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 1764480241}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -57332,8 +57332,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 1772090093}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -58388,8 +58388,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 1863689300}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -58703,8 +58703,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 1864415016}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -59770,8 +59770,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 1930051790}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -60486,8 +60486,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 2016914968}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -61092,8 +61092,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerDistance: 10
-  minDistance: 3
-  maxDistance: 5
+  minDistance: 5
+  maxDistance: 11
   controller: {fileID: 2042801544}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
