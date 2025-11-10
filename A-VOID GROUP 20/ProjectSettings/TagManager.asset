@@ -9,6 +9,7 @@ TagManager:
   - Jetpack
   - Monitor
   - Ammo
+  - RayGun
   layers:
   - Default
   - TransparentFX

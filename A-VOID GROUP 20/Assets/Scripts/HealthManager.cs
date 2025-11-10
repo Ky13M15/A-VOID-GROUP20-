@@ -1,61 +1,78 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
     [Header("Health Settings")]
-    public float maxHealth = 100f;
-    public float currentHealth;
+    public int maxBars = 8;
+    public int currentBars;
 
    
     [Header("UI References")]
-    public Image healthBar; 
+    public Image[] healthBars; 
     public GameObject DeathScreen;
 
     [Header("Respawn Settings")]
     public Transform spawnPoint;
     public bool reloadSceneOnRespawn = false;
 
+    private FPController fpController;
+    private bool isDead = false;
+
 
 
     void Start()
     {
-        currentHealth = maxHealth;
+        fpController = GetComponent<FPController>();
+        currentBars = maxBars;
         UpdateHealthUI();
+
         if (DeathScreen != null) DeathScreen.SetActive(false);
-
     }
-    public void TakeDamage(float damage)
-    {
-        currentHealth -= damage;
-        currentHealth = Mathf.Clamp(currentHealth, 0,maxHealth);
 
+    public void TakeDamage(int damageBars =1)
+    {
+        if (isDead) return;
+
+        currentBars -= damageBars;
+        currentBars = Mathf.Clamp(currentBars, 0, maxBars);
         UpdateHealthUI();
-        if (currentHealth <= 0)
+
+        if (currentBars <= 0)
         {
             Death();
         }
     }
-    public void Heal(float amount)
+
+    
+    public void Heal(int bars = 2)
     {
-        currentHealth += amount;
-        currentHealth= Mathf.Clamp(currentHealth, 0, maxHealth);
+        if (isDead) return;
+
+        currentBars += bars;
+        currentBars = Mathf.Clamp(currentBars, 0, maxBars);
         UpdateHealthUI();
     }
     private void UpdateHealthUI()
     {
-        if (healthBar != null)
+        for (int i = 0; i < healthBars.Length; i++)
         {
-            healthBar.fillAmount = currentHealth / maxHealth;
+            if (healthBars[i] != null)
+            {
+                healthBars[i].enabled = i < currentBars;
+            }
         }
     }
 
-        // Update is called once per frame
-        private void Death()
+    // Update is called once per frame
+    private void Death()
     {
-        GetComponent<FPController>().enabled = false;
+        if (isDead) return;
+        isDead = true;
 
+        fpController.enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
@@ -65,9 +82,11 @@ public class HealthManager : MonoBehaviour
     }
     public void ResetHealth()
     {
-        currentHealth= maxHealth;
+        currentBars = maxBars;
         UpdateHealthUI();
-        if(DeathScreen != null) DeathScreen.SetActive(false);
+        isDead = false;
+
+        if (DeathScreen != null) DeathScreen.SetActive(false);
 
         if (reloadSceneOnRespawn)
         {
@@ -75,10 +94,11 @@ public class HealthManager : MonoBehaviour
         }
         else if (spawnPoint != null)
         {
-            transform.position = spawnPoint.position; 
-            transform.rotation = spawnPoint.rotation; 
+            transform.position = spawnPoint.position;
+            transform.rotation = spawnPoint.rotation;
         }
-        GetComponent<FPController>().enabled = true ;
+
+        fpController.enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }

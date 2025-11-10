@@ -16,6 +16,8 @@ public class FPController : MonoBehaviour
     public float aimFOV = 40f;
     public float aimSpeed = 10f;
     private Controls1 controls;
+    public bool hasWeapon = false;
+
 
 
 
@@ -303,6 +305,11 @@ public void OnShoot(InputAction.CallbackContext context)
     public void OnLook(InputAction.CallbackContext context) => lookInput = context.ReadValue<Vector2>();
     private void Shoot()
     {
+        if (!hasWeapon)
+        {
+            Debug.Log("No weapon equipped!");
+            return; 
+        }
         if (!pauseMenuScript.GameIsPaused)
         {
             Debug.Log("Bool: " + pauseMenuScript.GameIsPaused);
