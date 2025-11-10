@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Interactable
   - Sun
-  - Jetpack
-  - Monitor
   layers:
   - Default
   - TransparentFX
@@ -15,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Interactable
+  - 
   - 
   - 
   - 

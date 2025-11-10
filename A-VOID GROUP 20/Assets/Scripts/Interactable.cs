@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-    public string promptMessage;
+    public string promptmessage;
     public void BaseInteraction()
     {
         Interact();
