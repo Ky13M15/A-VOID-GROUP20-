@@ -5,40 +5,46 @@ public class DoorControler : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Animator animator;
 
-    public AudioSource audioSource;
-    public AudioClip openingDoor;
-    public AudioClip closingDoor;
+     public AudioSource DoorAudio;
+    bool DoorOpening;
 
-    private string oDoorState = "Door animations";
-    private string cDoorState = "sliding";
+    public AudioClip doorOpening;
+    public AudioClip doorClosing;
+    private string openingState = "Door animations";
+    private string closingState = "sliding";
     private bool wasOpened = false;
     private bool wasClosed = false;
 
     void Start()
     {
+        DoorOpening = false;
         animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
-
-
+        DoorAudio = GetComponent<AudioSource>();
     }
 
-    public void PlayOpenDoorAudio()
+
+    void Update()
     {
-        if (audioSource != null && openingDoor != null)
+        bool isOpened = animator.GetCurrentAnimatorStateInfo(0).IsName(openingState);
+        if (isOpened && !wasOpened)
         {
-            audioSource.PlayOneShot(openingDoor);
+            if (DoorAudio != null && doorOpening != null)
+            {
+                DoorAudio.PlayOneShot(doorOpening);
+            }
         }
+        wasOpened = isOpened;
+        bool isClosed = animator.GetCurrentAnimatorStateInfo(0).IsName(closingState);
+        if (isClosed && !wasClosed)
+        {
+            if (DoorAudio != null && doorClosing != null)
+            {
+                DoorAudio.PlayOneShot(doorClosing);
+            }
+        }
+        wasClosed = isClosed;
     }
 
-    public void PlayCloseDoorAudio()
-    {
-        if (audioSource != null && closingDoor != null)
-        {
-            audioSource.PlayOneShot(closingDoor);
-        }
-    }
-
-    
 
     private void OnTriggerEnter(Collider other)
     {
