@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class DoorControler : MonoBehaviour
 {
+    //Title: How To Easily Open Doors in Unity With Trigger Events
+    //Author: Fist Full of Shrimp
+    //Date: 3 April 2024
+    //Availability: https://www.youtube.com/watch?v=A1XO_nTY37o
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Animator animator;
 
