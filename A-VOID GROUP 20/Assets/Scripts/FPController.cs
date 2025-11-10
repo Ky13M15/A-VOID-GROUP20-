@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FPController : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class FPController : MonoBehaviour
     public float normalFOV = 60f;
     public float aimFOV = 40f;
     public float aimSpeed = 10f;
+    private Controls1 controls;
+
+
 
     public LazerMuzzleFlash muzzleFlash;
 
@@ -22,7 +26,7 @@ public class FPController : MonoBehaviour
     [SerializeField] private float interactRange = 3f;
     [SerializeField] LayerMask interactLayer;
     
-    [SerializeField] float jetpackForce = 10f;
+  
 
 
     [SerializeField] private GameObject DeathScreen;
@@ -80,7 +84,7 @@ public class FPController : MonoBehaviour
 
     public PauseMenu pauseMenuScript;
 
-    public Animator animator;
+    private Animator animator;
 
 
 
@@ -92,9 +96,30 @@ public class FPController : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = false;
+        
+        controls = new Controls1();
+        controls.Player.Enable();
 
-        PlayerInput playerInput = GetComponent<PlayerInput>();
-        interactAction = playerInput.actions;
+        controls.Player.Movement.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
+        controls.Player.Movement.canceled += ctx => moveInput = Vector2.zero;
+
+        controls.Player.Look.performed += ctx => lookInput = ctx.ReadValue<Vector2>();
+        controls.Player.Look.canceled += ctx => lookInput = Vector2.zero;
+
+        controls.Player.Jump.performed += OnJump;
+        controls.Player.Interact.performed += OnInteract;
+        controls.Player.Pickup.performed += OnPickup;
+        controls.Player.Throwing.performed += OnThrow;
+        controls.Player.Aiming.started += OnAim;
+        controls.Player.Aiming.canceled += OnAim;
+        controls.Player.Sprint.started += OnSprint;
+        controls.Player.Sprint.canceled += OnSprint;
+        controls.Player.Crouch.started += OnCrouch;
+        controls.Player.Crouch.canceled += OnCrouch;
+        controls.Player.Shoot.performed += OnShoot;
+
+
+
         playerCamera = Camera.main;
 
         if (playerCamera == null)
@@ -121,23 +146,33 @@ public class FPController : MonoBehaviour
             heldObject.MoveToHoldPoint(holdPoint.position);
         }
         Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);
-        if (Physics.Raycast(ray, out RaycastHit hit, pickupRange))
+        if (Physics.Raycast(ray, out RaycastHit hit, pickupRange, interactLayer))
         {
-            PickupObject pickup = hit.collider.GetComponent<PickupObject>();
-            if (pickup != null)
+            Interactable interactable = hit.collider.GetComponent<Interactable>();
+            if (interactable != null)
             {
-                pickupText.text = pickup.gameObject.name;
-                return;
+                pickupText.text = interactable.promptMessage;
+            }
+            else
+            {
+                pickupText.text = "";
             }
         }
-        //clear text if not looking at a pickup
-
-
+        else
+        {
+            pickupText.text = "";
+        }
         float targetFOV = isAiming ? aimFOV : normalFOV;
         float newFOV = Mathf.Lerp(playerCamera.fieldOfView, targetFOV, Time.deltaTime * aimSpeed);
 
-
     }
+
+
+
+   
+
+
+    
 
 
 
@@ -168,11 +203,10 @@ public class FPController : MonoBehaviour
             }
 
             {
-                PickupObject pickUp = hit.collider.GetComponent<PickupObject>();
-                if (pickUp != null)
+                if (hit.collider.GetComponent<PickupObject>() != null)
                 {
-                    pickUp.Pickup(holdPoint);
-                    heldObject = pickUp;
+                    hit.collider.GetComponent<PickupObject>().Pickup(holdPoint);
+                    heldObject = hit.collider.GetComponent<PickupObject>();
 
                 }
             }
@@ -232,10 +266,18 @@ public class FPController : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, interactRange, interactLayer))
         {
-            IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+            if (hit.collider.CompareTag("Jetpack"))
+            {
+                Debug.Log("Jetpack found! Loading outro cutscene...");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("OutroCutScene");
+                return;
+            }
+        
+        
+            Interactable interactable = hit.collider.GetComponent<Interactable>();
             if (interactable != null)
             {
-                interactable.Interact();
+                interactable.BaseInteraction();
             }
             else
             {
@@ -250,7 +292,7 @@ public class FPController : MonoBehaviour
     }
 
 
-    public void OnShoot(InputAction.CallbackContext context)
+public void OnShoot(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
@@ -319,7 +361,7 @@ public class FPController : MonoBehaviour
         }
     }
 
-    public void HandleMovement()
+    private void HandleMovement()
     {
         float currentSpeed = moveSpeed * (isSprinting ? sprintMultiplier: 1f);
         Vector3 move = transform.right * moveInput.x + transform.forward *
@@ -337,7 +379,7 @@ public class FPController : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
     }
-    public void HandleLook()
+    private void HandleLook()
     {
         float mouseX = lookInput.x * lookSensitivity;
         float mouseY = lookInput.y * lookSensitivity;
