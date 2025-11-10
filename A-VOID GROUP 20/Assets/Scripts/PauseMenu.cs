@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public PlayerInput Controls1;
 
+    public MonoBehaviour Camera;
+
     // Update is called once per frame
     void Update()
     {
@@ -36,6 +38,10 @@ public class PauseMenu : MonoBehaviour
         if(Controls1 != null)
             Controls1.enabled = true;
 
+        if (Camera != null)
+            Camera.enabled = true;
+
+
         Debug.Log("Resume");
     }
 
@@ -49,6 +55,10 @@ public class PauseMenu : MonoBehaviour
 
         if(Controls1 !=null)
             Controls1.enabled = false;
+
+        if (Camera != null)
+            Camera.enabled = false;
+
 
         Debug.Log("Game Paused");
 

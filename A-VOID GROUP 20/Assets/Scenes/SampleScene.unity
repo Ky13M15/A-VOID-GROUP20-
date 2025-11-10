@@ -5455,9 +5455,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 56792133}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -5487,7 +5487,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.284363
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -13116,9 +13116,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 246288482}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -13148,7 +13148,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.204376
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -14273,9 +14273,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 335972903}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -14305,7 +14305,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 18.4104
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -15215,9 +15215,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 360869138}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -15247,7 +15247,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 18.953491
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -15435,9 +15435,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 372830415}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -15467,7 +15467,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.84967
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -16286,9 +16286,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 427380058}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -16318,7 +16318,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.145752
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -16718,9 +16718,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 457587944}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -16750,7 +16750,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.560684
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -22362,9 +22362,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 5
-  maxDistance: 11
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 517674576}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -22415,7 +22415,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10.925171
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -25485,9 +25485,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 723162656}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -25517,7 +25517,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.773148
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -26038,6 +26038,7 @@ MonoBehaviour:
   GameIsPaused: 0
   pauseMenuUI: {fileID: 1181054037}
   Controls1: {fileID: 0}
+  Camera: {fileID: 0}
 --- !u!225 &749416648
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -26064,7 +26065,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameIsPaused: 0
   pauseMenuUI: {fileID: 1181054037}
-  Controls1: {fileID: 0}
+  Controls1: {fileID: 354573407}
+  Camera: {fileID: 720988855}
 --- !u!1 &752468058 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 482d5ef3ce004174999dfdbf6b7ed16b, type: 3}
@@ -31376,9 +31378,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 850609108}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -31408,7 +31410,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.913574
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -32647,9 +32649,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 977750026}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -32679,7 +32681,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.005615
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -33281,9 +33283,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 1001890252}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -33313,7 +33315,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.322815
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -33501,9 +33503,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 1007818591}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -33533,7 +33535,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.949524
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -33795,9 +33797,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 1013530182}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -33827,7 +33829,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 20.132385
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -34161,9 +34163,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 1037779377}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -34193,7 +34195,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 18.900879
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -35315,9 +35317,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 1120569768}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -35347,7 +35349,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.5755
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -35778,9 +35780,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 1152337158}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -35810,7 +35812,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 18.523804
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -36464,9 +36466,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 1216790827}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -36496,7 +36498,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.241226
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -36689,9 +36691,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 1223091943}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -36721,7 +36723,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 20.082336
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -51102,9 +51104,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 1695870204}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -51134,7 +51136,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.840286
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -56551,9 +56553,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 1748975723}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -56583,7 +56585,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.782776
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -56940,9 +56942,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 1764480241}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -56972,7 +56974,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.596039
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -57329,9 +57331,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 1772090093}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -57361,7 +57363,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 18.489624
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -58385,9 +58387,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 1863689300}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -58417,7 +58419,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 18.712036
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -58700,9 +58702,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 1864415016}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -58732,7 +58734,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.571411
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -59767,9 +59769,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 1930051790}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -59799,7 +59801,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 19.22879
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -60483,9 +60485,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 2016914968}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -60515,7 +60517,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 18.85022
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -61089,9 +61091,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerDistance: 0
-  minDistance: 10
-  maxDistance: 20
+  playerDistance: 10
+  minDistance: 3
+  maxDistance: 5
   controller: {fileID: 2042801544}
   daynNiteScript: {fileID: 720988858}
   isDead: 0
@@ -61121,7 +61123,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 18.901184
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
