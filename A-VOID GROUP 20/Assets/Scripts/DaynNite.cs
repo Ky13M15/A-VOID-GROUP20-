@@ -47,6 +47,17 @@ public class DaynNite : MonoBehaviour
     }
     void Days()
     {
+        if (daysCounter >= 10)
+        {
+            timeOfDay = TimeOfDay.Nite;
+            exposure = Mathf.Max(exposure - timePassesBy * Time.deltaTime * negativeMultiplier, 0.0f);
+            ourSkybox.SetFloat("_Exposure", exposure);
+            ourSun.intensity = exposure;
+            ourSun.transform.Rotate(Vector3.up, timePassesBy * Time.deltaTime, Space.World);
+            Debug.Log("Permanent Night: Days " + daysCounter);
+            return; 
+        }
+
         exposure = Mathf.Clamp(exposure, 0.0f, 80.0f);
         ourSun.intensity = exposure;
         if (currentTime >= daysEnd)
@@ -81,6 +92,7 @@ public class DaynNite : MonoBehaviour
             {
                 //approaches night
                 exposure -= timePassesBy * Time.deltaTime*negativeMultiplier;
+
                 timeOfDay = TimeOfDay.Nite;
 
                 ourSkybox.SetFloat("_Exposure", exposure);
